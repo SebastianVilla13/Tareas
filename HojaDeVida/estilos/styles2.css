@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+    text-align: center;
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    background-color: rgb(55, 136, 66);
+    width: 100%;
+    text-align: center;
+}
+
+article {
+    padding: 15px;
+    padding-top: 80px;
+    width: 70%;
+    float: center;
+    background-color: rgb(163, 199, 163);
+}
+
+nav {
+    background-color: rgb(209, 209, 209);
+}
