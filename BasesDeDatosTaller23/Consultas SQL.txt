@@ -1,0 +1,23 @@
+Consulta por sexo:
+
+select Nombres,  Apellidos from personas, sexo where Sexo = idSexo AND tipoSexo = "Masculino" ;
+
+--------------------------------------------
+
+Consulta por Edad:
+
+select Nombres, Apellidos from personas where FechaNacimiento = "1983-01-30";
+
+--------------------------------------------
+
+Consulta por el Apellido
+
+select Nombres, Apellidos from personas where Apellidos = "Marin";
+
+--------------------------------------------
+
+Consulta por edad y por sexo:
+
+select Nombres, Apellidos, tipoSexo, fechaNacimiento from personas, sexo where Sexo = idSexo and tipoSexo = "Femenino" and fechaNacimiento = "1983-01-30";
+
+--------------------------------------------
