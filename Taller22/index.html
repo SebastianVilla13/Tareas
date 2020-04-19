@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ejercicios Programación Web</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><button type="button" id="nPar">Numero es par o no</button></li>
+                <li><button type="button" id="nMayor">Numero Mayor</button></li>
+                <li><button type="button" id="nOrden">Ordenamiento De Tres Numeros</button></li>
+                <li><button type="button" id="nMultiplo">Numero es multiplo de otro</button></li>
+                <li><button type="button" id="nBiciesto">Año Biciesto</button></li>
+                <li><button type="button" id="nNomina">Nomina Sencilla</button></li>
+                <li><button type="button" id="nDescuento">Descuentos</button></li>
+                <li><button type="button" id="nMatricula">Valor Matricula</button></li>
+                <li><button type="button" id="nEnvioMercancia">Envio De Mercancias</button></li>
+                <li><button type="button" id="nSucesoSA">Almacenes Suceso S.A</button></li>
+                <li><button type="button" id="nEmpTransporte">Empresa De Transportes</button></li>
+                <li><button type="button" id="nSerieNumeros">Serie De Numeros, Sumatoria Y Promedio</button></li>
+                <li><button type="button" id="nFactorial">Calcular Factorial De Un Numero</button></li>
+                <li><button type="button" id="nCuadratica">Ecuaciones Cuadraticas</button></li>
+
+            </ul>
+
+        </nav>
+
+        <article>
+
+            <div id="divNumMayor">
+                <p>Digite el primer numero: </p>
+                <input type="number" id="num1">
+                <p>Digite el segundo numero: </p>
+                <input type="number" id="num2">
+                <p>Digite el tercer numero: </p>
+                <input type="number" id="num3">
+                <p>El resultado es: </p>
+                <button type="button" onclick="numMayor()">Presiona</button>
+                <p id="respuesta"></p>
+            </div>
+
+            <div id="divNumPar">
+                <p>Digite el primer numero: </p>
+                <input type="number" id="num1a">
+                <p>El resultado es: </p>
+                <button type="button" onclick="numPar()">Presiona</button>
+                <p id="respuestaPar"></p>
+            </div>
+
+            <div id="divNumOrden">
+                <p>Digite el primer numero</p>
+                <input type="number" id="num1b">
+                <p>Digite el segundo numero</p>
+                <input type="number" id="num2b">
+                <p>Digite el tercer numero</p>
+                <input type="number" id="num3b">
+                <p>Presiona para ordenar</p>
+                <button type="button" id="btnOrdenar" onclick="numOrden()">Ordenar</button>
+
+                <p id="respuestaOrden1"></p>
+                <p id="respuestaOrden2"></p>
+                <p id="respuestaOrden3"></p>
+            </div>
+
+            <div id="divNumMultiplo">
+                <p>Ingrese primer numero: </p>
+                <input type="number" id="num1c">
+                <p>Ingrese segundo numero: </p>
+                <input type="number" id="num2c">
+                <p>Presiona para ver la respuesta</p>
+                <button type="button" id="btnMultiplo" onclick="numMultiplo()">Presiona</button>
+                <p id="respuestaMultiplo"></p>
+            </div>
+
+            <div id="divBiciesto">
+                <p>Ingrese el año que desea:</p>
+                <input type="number" id="anio">
+                <p>Presiona para saber la respuesta:</p>
+                <button type="button" id="btnBiciesto" onclick="anoBiciesto()">Presiona</button>
+                <p id="repuestaBiciesto"></p>
+            </div>
+
+            <div id="divNomina">
+                <p>Ingrese nombre:</p>
+                <input type="text" id="nombreEmpleado">
+                <p>Ingrese numero de horas trabajadas:</p>
+                <input type="number" id="horasTrabajadas">
+                <p>Ingrese valor de hora:</p>
+                <input type="number" id="valorHora">
+                <p>Ingrese valor de salario minimo mensual:</p>
+                <input type="number" id="SalarioMinimo">
+                <p>Presiona para saber el resultado:</p>
+                <button type="button" onclick="btnNomina()">Presiona</button>
+                <p id="respNombre"></p>
+                <p id="respSalario"></p>
+            </div>
+
+            <div id="divDescuento">
+                <p>Ingrese el numero de muebles que desea comprar:</p>
+                <input type="number" id="numMuebles">
+                <button type="button" onclick="btnDescuento()">Presiona</button>
+                <p id="respDescuento"></p>
+            </div>
+            <div id="divMatricula">
+                <p>Numero De Creditos:</p>
+                <input type="number" id="cCreditos">
+                <p>Valor Credito</p>
+                <input type="number" id="vCredito">
+                <p>Estrato Del Estudiante:</p>
+                <select id="selectEstrato" name="Estrato">
+                    <option value= 5 >Estrato 5</option>
+                    <option value= 4 >Estrato 4</option>
+                    <option value= 3 >Estrato 3</option>
+                    <option value= 2 >Estrato 2</option>
+                    <option value= 1 selected>Estrato 1</option>
+                </select>
+                <p>Para saber el valor de la matricula:</p>
+                <button type="button" onclick="btnMatricula()">Presiona</button>
+                <p id="respCMatricula"></p>
+                <p id="respVSubsidio"></p>
+            </div>
+            <div id="divEnvioMercancia">
+                <p>Peso de Mercancia:</p>
+                <input type="number" id="idPM">
+                <p>Valor de Mercancia:</p>
+                <input type="number" id="idVM">
+                <p>Es Lunes:</p>
+                <select id="idLunes">
+                    <option value="S">Si</option>
+                    <option value="N">No</option>
+                </select>
+                <p>Tipo de pago:</p>
+                <select id="idTP">
+                    <option value="T">Tarjeta</option>
+                    <option value="E">Efectivo</option>
+                </select>
+                <p>Presiona para saber cuanto pagar:</p>
+                <button type="button" onclick="btnMercancia()">Presiona</button>
+                <p id="respTarifa"></p>
+                <p id="respDescuento"></p>
+                <p id="respTotalP"></p>
+            </div>
+            <div id="divSucesoSA">
+                <input type="number" id="cCompra">
+                <select id="tipoProducto">
+                    <option value="P">Perecedero</option>
+                    <option value="N">No Perecedero</option>
+                </select>
+                <select id="tipoConservacion">
+                    <option value="F">Frio</option>
+                    <option value="A">Ambiente</option>
+                </select>
+                <input type="number" id="pConservacion">
+                <input type="number" id="pAlmacenamiento">
+                <input type="number" id="volumen">
+                <select id="mAlmacenamiento">
+                    <option value="NE">Nevera</option>
+                    <option value="C">Congelador</option>
+                    <option value="E">Estanteria</option>
+                    <option value="G">Guacal</option>
+                </select>
+                <button type="button" onclick="btnAlmacen()">Presiona</button>
+                <p id="respCC"></p>
+                <p id="respPD"></p>
+                <p id="respCE"></p>
+                <p id="respVP"></p>
+                <p id="respVV"></p>
+            </div>
+            <div id="divEmpTransporte">
+                <p>Numero de ruta:</p>
+                <select id="nRuta">
+                    <option value = 1> Ruta 1</option>
+                    <option value= 2>Ruta 2</option>
+                    <option value= 3>Ruta 3</option>
+                    <option value= 4>Ruta 4</option>
+                </select>
+                <p>Numero de viajes: </p>
+                <input type="number" id="nViajes">
+                <p>Numero De Pasajeros Total</p>
+                <input type="number" id="nPasajeros">
+                <p> Numero de encomiendas menores de 10kg:</p>
+                <input type="number" id="nEncomiendasME">
+                <p>Numero de encomiendas entre 10kg y 20kg:</p>
+                <input type="number" id="nEncomiendasEN">
+                <p>Numero de encomiendas de mas de 20kg:</p>
+                <input type="number" id="nEncomiendasMA">
+                <p>Presiona para mostrar los datos:</p>
+                <button type="button" onclick="btnTransporte()">Presiona</button>
+                <p id="respInPasajeros"></p>
+                <p id="respInEncomiendas"></p>
+                <p id="totalIngresos"></p>
+                <p id="pagoAyudante"></p>
+                <p id="pagoSeguro"></p>
+                <p id="pagoCombustible"></p>
+                <p id="totalDeducciones"></p>
+                <p id="totalLiquidacion"></p>
+            </div>
+            <div id="divSerieNumeros">
+                <p>Ingresa un numero:</p>
+                <input type="number" id="num1d">
+                <p>Presiona para saber la Sumatoria y el promedio</p>
+                <button type="button" onclick="btnSumatoria()">Presiona</button>
+                <p id="respSumatoria"></p>
+                <p id="respPromedio"></p>
+            </div>
+            <div id="divFactorial">
+                <p>Ingresa un numero para sacar el factorial:</p>
+                <input type="number" id="facto">
+                <p>Presiona para saber el factorial</p>
+                <button type="button" onclick="btnFactorial()">Presiona</button>
+                <p id="respFacto"></p>
+            </div>
+            <div id="divCuadratica">
+                <p>Ingrese a:</p>
+                <input type="number" id="numAA">
+                <p>Ingrese b:</p>
+                <input type="number" id="numBB">
+                <p>Ingrese c:</p>
+                <input type="number" id="numCC">
+                <p>Presiona para saber la cuadratica:</p>
+                <button type="button" onclick="btnCuadratica()">Presiona</button>
+                <p id="respX1"></p>
+                <p id="respX2"></p>
+            </div>
+
+        </article>
+    </section>
+</body>
+<script src="functions.js"></script>
+<script src="functionsExercises.js"></script>
+
+</html>
